@@ -1,0 +1,93 @@
+.header {
+  background: white !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  color: #333 !important;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  min-height: 64px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: auto;
+  width: auto;
+  max-height: 45px;
+}
+
+.navigation {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #e6007e;
+}
+
+.ctaContainer {
+  display: flex;
+  align-items: center;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, #e6007e, #f06292) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 25px !important;
+  text-transform: none !important;
+  box-shadow: 0 4px 12px rgba(230, 0, 126, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.ctaButton:hover {
+  background: linear-gradient(135deg, #c2185b, #e6007e) !important;
+  box-shadow: 0 6px 16px rgba(230, 0, 126, 0.4) !important;
+  transform: translateY(-1px);
+}
+
+/* Mobile menu button */
+.menuButton {
+  display: none !important;
+  color: #e6007e !important;
+}
+
+/* Drawer */
+.drawer {
+  width: 250px;
+  background: white !important;
+  padding: 20px;
+}
+
+.drawer .MuiListItemText-root {
+  color: #333 !important;
+  font-weight: 500 !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .navigation {
+    display: none;
+  }
+
+  .menuButton {
+    display: inline-flex !important;
+  }
+}

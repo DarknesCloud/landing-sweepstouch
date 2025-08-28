@@ -1,0 +1,75 @@
+.container {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 📌 Imagen a la izquierda, texto a la derecha */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.imageCol {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.textCol {
+  flex: 1;
+  text-align: left;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.highlight {
+  color: #e91e63;
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.description {
+  margin-bottom: 20px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* 📱 Responsive: en mobile se apila */
+@media (max-width: 900px) {
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .textCol {
+    text-align: center;
+  }
+
+  .listItem {
+    justify-content: center;
+    text-align: center;
+  }
+}

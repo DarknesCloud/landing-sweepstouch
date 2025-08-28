@@ -1,0 +1,53 @@
+.section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #dcdcdc;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.clientName {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.details {
+  list-style: disc inside;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding-left: 0.5rem;
+  text-align: left;
+}
+
+.icon {
+  opacity: 0.5; /* igual que en el ejemplo */
+}

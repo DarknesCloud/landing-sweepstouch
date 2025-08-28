@@ -1,0 +1,126 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+}
+
+.gridContainer {
+  width: 100%;
+  height: 100%;
+}
+
+/* ============ LADO IZQUIERDO ============ */
+.imageSection {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  /* Imagen pegada a la izquierda */
+  object-position: left;
+
+  /* degradado que se desvanece hacia la derecha */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: left;
+  -webkit-mask-size: cover;
+
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-repeat: no-repeat;
+  mask-position: left;
+  mask-size: cover;
+}
+
+/* ============ LADO DERECHO ============ */
+.contentSection {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 4rem 3rem;
+  height: 100vh;
+}
+
+.content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mainTitle {
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  margin-bottom: 0.3rem !important;
+  color: #111;
+}
+
+.subtitle {
+  font-size: 1.2rem !important;
+  font-weight: 400 !important;
+  margin-bottom: 1.5rem !important;
+  color: #333;
+}
+
+.ctaButton {
+  background: #e91e63 !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  padding: 1rem 2.5rem !important;
+  border-radius: 50px !important;
+  text-transform: none !important;
+  margin-bottom: 2rem !important;
+  box-shadow: 0 6px 16px rgba(233, 30, 99, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.ctaButton:hover {
+  background: #c2185b !important;
+  box-shadow: 0 8px 20px rgba(194, 24, 91, 0.4) !important;
+  transform: translateY(-2px);
+}
+
+.statsContainer {
+  display: flex;
+  align-items: center;
+}
+
+.statText {
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  color: #444;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 960px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .imageSection {
+    height: 50vh;
+  }
+
+  .contentSection {
+    height: auto;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .mainTitle {
+    font-size: 2.2rem !important;
+  }
+}

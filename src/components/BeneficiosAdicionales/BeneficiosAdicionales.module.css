@@ -1,0 +1,41 @@
+.container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.title {
+  color: #e91e63;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.gridContainer {
+  max-width: 900px; /* 👈 limita el ancho para que se centre más */
+  margin: 0 auto;
+}
+
+.card {
+  box-shadow: none;
+  text-align: center;
+  background: transparent;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.cardTitle {
+  font-weight: 500;
+  white-space: pre-line; /* 👈 para respetar los saltos de línea en títulos */
+}
+
+.footerText {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #777;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
