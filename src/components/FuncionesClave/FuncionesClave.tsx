@@ -48,8 +48,8 @@ const FuncionesClave: React.FC<FuncionesClaveProps> = ({
             <Image
               src={icon1}
               alt="Registro simple"
-              width={28}
-              height={28}
+              width={40}
+              height={40}
               unoptimized
             />
             <Typography variant="body1">
@@ -62,8 +62,8 @@ const FuncionesClave: React.FC<FuncionesClaveProps> = ({
             <Image
               src={icon2}
               alt="Incentivo inmediato"
-              width={28}
-              height={28}
+              width={40}
+              height={40}
               unoptimized
             />
             <Typography variant="body1">

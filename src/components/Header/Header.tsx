@@ -28,10 +28,8 @@ const Header: React.FC = () => {
   };
 
   const navItems = [
-    { label: 'Sobre Nosotros', href: '#' },
-    { label: 'Blog', href: '#' },
+    { label: 'Sobre Nosotros', href: '/about' },
     { label: 'FAQs', href: '#' },
-    { label: 'Soporte', href: '#' },
   ];
 
   return (
@@ -66,11 +64,7 @@ const Header: React.FC = () => {
           </Box>
 
           {/* CTA Button */}
-          <Box className={styles.ctaContainer}>
-            <Button variant="contained" className={styles.ctaButton}>
-              Sign in
-            </Button>
-          </Box>
+          
 
           {/* Mobile Menu Button */}
           <IconButton

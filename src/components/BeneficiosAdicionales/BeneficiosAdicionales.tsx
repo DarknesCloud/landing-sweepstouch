@@ -43,8 +43,8 @@ export default function BeneficiosAdicionales() {
                   <Image
                     src={beneficio.img}
                     alt={beneficio.title}
-                    width={60}
-                    height={60}
+                    width={80}
+                    height={80}
                   />
                 </Box>
                 <Typography variant="body1" className={styles.cardTitle}>
