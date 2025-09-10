@@ -16,6 +16,7 @@ import {
   ListItemText,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Header.module.css';
@@ -27,13 +28,20 @@ const Header: React.FC = () => {
     setMobileOpen(!mobileOpen);
   };
 
+  const handleWhatsAppClick = () => {
+    const phoneNumber = '+1234567890'; // Reemplaza con el número real
+    const message = encodeURIComponent('Hola, me interesa conocer más sobre SweepsTouch');
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   const navItems = [
     { label: 'Sobre Nosotros', href: '/about' },
     { label: 'FAQs', href: '#' },
   ];
 
   return (
-    <AppBar position="static" className={styles.header}>
+    <AppBar position="fixed" className={styles.header}>
       <Container maxWidth="xl">
         <Toolbar className={styles.toolbar}>
           {/* Logo */}
@@ -63,7 +71,16 @@ const Header: React.FC = () => {
             ))}
           </Box>
 
-          {/* CTA Button */}
+          {/* WhatsApp Contact Button */}
+          <Box className={styles.ctaContainer}>
+            <Button
+              onClick={handleWhatsAppClick}
+              className={styles.whatsappButton}
+              startIcon={<WhatsAppIcon />}
+            >
+              Contáctanos
+            </Button>
+          </Box>
           
 
           {/* Mobile Menu Button */}
@@ -97,6 +114,19 @@ const Header: React.FC = () => {
               <ListItemText primary={item.label} />
             </ListItem>
           ))}
+          <ListItem>
+            <Button
+              onClick={() => {
+                handleWhatsAppClick();
+                handleDrawerToggle();
+              }}
+              className={styles.whatsappButtonMobile}
+              startIcon={<WhatsAppIcon />}
+              fullWidth
+            >
+              Contáctanos
+            </Button>
+          </ListItem>
         </List>
       </Drawer>
     </AppBar>

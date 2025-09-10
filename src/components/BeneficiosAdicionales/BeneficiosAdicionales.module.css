@@ -29,6 +29,8 @@
 .cardTitle {
   font-weight: 500;
   white-space: pre-line; /* 👈 para respetar los saltos de línea en títulos */
+  text-align: center;
+  line-height: 1.4;
 }
 
 .footerText {
@@ -38,4 +40,7 @@
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center; /* Explicitly center the text */
 }
+
+

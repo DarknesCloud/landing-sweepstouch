@@ -4,6 +4,7 @@
 import { Box, Grid, Typography, Card, CardContent } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
+import { useGSAP } from '../../hooks/useGSAP';
 import styles from './BeneficiosAdicionales.module.css';
 
 const beneficios = [
@@ -22,9 +23,11 @@ const beneficios = [
 ];
 
 export default function BeneficiosAdicionales() {
+  const containerRef = useGSAP();
+
   return (
-    <Box className={styles.container}>
-      <Typography variant="h6" className={styles.title}>
+    <Box className={styles.container} ref={containerRef}>
+      <Typography variant="h6" className={`${styles.title} fade-in`}>
         Beneficios Adicionales
       </Typography>
 
@@ -37,7 +40,7 @@ export default function BeneficiosAdicionales() {
         {beneficios.map((beneficio, index) => (
           // @ts-expect-error Necesario porque MUI Grid pide prop 'component'
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card className={styles.card}>
+            <Card className={`${styles.card} scale-in`}>
               <CardContent>
                 <Box className={styles.imageWrapper}>
                   <Image
@@ -56,7 +59,7 @@ export default function BeneficiosAdicionales() {
         ))}
       </Grid>
 
-      <Typography variant="body2" className={styles.footerText}>
+      <Typography variant="body2" className={`${styles.footerText} fade-in`}>
         Cada beneficio está respaldado por resultados medibles y casos de éxito
         comprobados en supermercados independientes como el tuyo.
       </Typography>
