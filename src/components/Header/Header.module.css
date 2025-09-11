@@ -16,8 +16,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0;
-  min-height: 64px;
+  padding: 0.5rem 1rem;
+  min-height: 70px;
 }
 
 .logoContainer {
@@ -28,21 +28,25 @@
 .logoImage {
   height: auto;
   width: auto;
-  max-height: 45px;
+  max-height: 60px; /* 🔥 Logo más grande */
+  min-height: 40px;
 }
 
 .navigation {
   display: flex;
   gap: 2rem;
   align-items: center;
+  margin-left: auto;
+  margin-right: 1rem; /* 🔥 Espacio antes del botón */
 }
 
 .navLink {
   text-decoration: none;
-  color: #666;
+  color: #444;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 1rem;
   transition: color 0.3s ease;
+  margin-right: 0.5rem; /* 🔥 Pequeño espaciado adicional */
 }
 
 .navLink:hover {
@@ -52,57 +56,44 @@
 .ctaContainer {
   display: flex;
   align-items: center;
+  gap: 1.5rem; /* 🔥 Separa links del botón */
 }
 
-.ctaButton {
-  background: linear-gradient(135deg, #e6007e, #f06292) !important;
+/* WhatsApp desktop */
+.whatsappButton {
+  background: linear-gradient(135deg, #e6007e, #c2185b) !important;
   color: white !important;
   font-weight: 600 !important;
-  padding: 0.5rem 1.5rem !important;
-  border-radius: 25px !important;
+  padding: 0.5rem 1.8rem !important;
+  border-radius: 30px !important;
   text-transform: none !important;
-  box-shadow: 0 4px 12px rgba(230, 0, 126, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(128, 0, 125, 0.3) !important;
   transition: all 0.3s ease !important;
 }
 
-.ctaButton:hover {
+.whatsappButton:hover {
   background: linear-gradient(135deg, #c2185b, #e6007e) !important;
   box-shadow: 0 6px 16px rgba(230, 0, 126, 0.4) !important;
   transform: translateY(-1px);
 }
 
-.whatsappButton {
-  background: linear-gradient(135deg, #25d366, #128c7e) !important;
-  color: white !important;
-  font-weight: 600 !important;
-  padding: 0.5rem 1.5rem !important;
-  border-radius: 25px !important;
-  text-transform: none !important;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3) !important;
-  transition: all 0.3s ease !important;
-}
-
-.whatsappButton:hover {
-  background: linear-gradient(135deg, #128c7e, #25d366) !important;
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4) !important;
-  transform: translateY(-1px);
-}
-
+/* WhatsApp en mobile (dentro del drawer) */
 .whatsappButtonMobile {
-  background: linear-gradient(135deg, #25d366, #128c7e) !important;
+  display: none;
+  background: linear-gradient(135deg, #e6007e, #c2185b) !important;
   color: white !important;
   font-weight: 600 !important;
-  padding: 0.75rem 1.5rem !important;
+  padding: 0.55rem 1.2rem !important; /* 🔥 Más delgado */
   border-radius: 25px !important;
   text-transform: none !important;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(128, 0, 125, 0.3) !important;
   transition: all 0.3s ease !important;
   margin-top: 1rem !important;
 }
 
-/* Mobile menu button */
+/* Botón hamburguesa */
 .menuButton {
-  display: none !important;
+  display: none !important; /* 🔥 Oculto en desktop */
   color: #e6007e !important;
 }
 
@@ -124,7 +115,15 @@
     display: none;
   }
 
+  .ctaContainer {
+    display: none;
+  }
+
   .menuButton {
-    display: inline-flex !important;
+    display: inline-flex !important; /* 🔥 Visible solo en mobile */
+  }
+
+  .whatsappButtonMobile {
+    display: block !important; /* 🔥 Botón WhatsApp dentro del menú */
   }
 }

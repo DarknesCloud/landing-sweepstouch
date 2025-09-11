@@ -14,6 +14,7 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
+  flex: 1;
 }
 
 .bgImage {
@@ -49,14 +50,19 @@
 .contentSection {
   background: #fff;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  align-items: baseline;
   padding: 4rem 3rem;
   height: 100vh;
+  flex: 1;
 }
 
 .content {
-  max-width: 500px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
 }
 
 .mainTitle {
@@ -116,8 +122,14 @@
 
   .contentSection {
     height: auto;
+    min-height: 50vh;
     padding: 3rem 2rem;
     text-align: center;
+  }
+
+  .content {
+    align-items: center;
+    max-width: 90%; /* 🔥 Mejor uso del ancho */
   }
 
   .mainTitle {

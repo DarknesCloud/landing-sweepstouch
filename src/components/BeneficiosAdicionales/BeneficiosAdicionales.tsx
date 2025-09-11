@@ -60,7 +60,7 @@ export default function BeneficiosAdicionales() {
       </Grid>
 
       <Typography variant="body2" className={`${styles.footerText} fade-in`}>
-        Cada beneficio está respaldado por resultados medibles y casos de éxito
+        Cada beneficio está respaldado por resultados medibles y casos de éxito<br/>
         comprobados en supermercados independientes como el tuyo.
       </Typography>
     </Box>

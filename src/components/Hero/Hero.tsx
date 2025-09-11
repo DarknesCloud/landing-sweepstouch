@@ -33,10 +33,10 @@ const Hero: React.FC = () => {
             </Typography>
 
             <Typography variant="h6" className={`${styles.subtitle} fade-in`}>
-              con tecnología innovadora que maximiza
+              Con tecnología innovadora que maximiza
             </Typography>
             <Typography variant="h6" className={`${styles.subtitle} fade-in`}>
-              tus ventas y fideliza tus clientes.
+              Tus ventas y fideliza tus clientes.
             </Typography>
 
             <Button variant="contained" className={`${styles.ctaButton} scale-in`}>
