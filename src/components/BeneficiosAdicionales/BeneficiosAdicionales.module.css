@@ -9,15 +9,28 @@
   font-weight: bold;
 }
 
-.gridContainer {
-  max-width: 900px; /* 👈 limita el ancho para que se centre más */
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 500px;
   margin: 0 auto;
 }
 
 .card {
-  box-shadow: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  background: transparent;
+  background: white;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.cardContent {
+  padding: 1.5rem !important;
 }
 
 .imageWrapper {
@@ -37,11 +50,132 @@
   margin-top: 25px;
   font-size: 18px;
   color: #777;
-  
+
   margin-left: auto;
   padding-top: 30px;
   margin-right: auto;
   text-align: center; /* Explicitly center the text */
 }
 
+/* ============ DESKTOP LAYOUT ============ */
+@media (min-width: 992px) {
+  .cardsContainer {
+    display: flex;
+    flex-direction: row; /* íconos en fila */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem; /* espacio entre ítems */
+    max-width: 100%;
+    margin: 2rem auto;
+  }
 
+  .card {
+    box-shadow: none; /* quitamos la tarjeta */
+    background: transparent;
+  }
+
+  .cardContent {
+    padding: 0 !important; /* sin padding de card */
+  }
+
+  .imageWrapper {
+    margin-bottom: 1rem;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .footerText {
+    margin-top: 2.5rem;
+    font-size: 0.95rem;
+    color: #666;
+    max-width: 1000px; /* mismo ancho que las cards */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 300px !important;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cardsContainer {
+    max-width: 100%;
+    gap: 1.2rem;
+  }
+
+  .card {
+    margin: 0;
+  }
+
+  .cardContent {
+    padding: 1.2rem !important;
+  }
+
+  .imageWrapper {
+    margin-bottom: 0.8rem;
+  }
+
+  .cardTitle {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+  .footerText {
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .cardsContainer {
+    gap: 1rem;
+  }
+
+  .cardContent {
+    padding: 1rem !important;
+  }
+
+  .imageWrapper {
+    margin-bottom: 0.6rem;
+  }
+
+  .imageWrapper img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .cardTitle {
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+
+  .footerText {
+    font-size: 0.85rem;
+    margin-top: 1.2rem;
+    padding-top: 1.2rem;
+  }
+}

@@ -111,6 +111,16 @@
 
 /* Responsive */
 @media (max-width: 900px) {
+  .toolbar {
+    padding: 0.5rem 0.5rem;
+    min-height: 60px;
+  }
+
+  .logoImage {
+    max-height: 45px;
+    min-height: 35px;
+  }
+
   .navigation {
     display: none;
   }
@@ -121,9 +131,27 @@
 
   .menuButton {
     display: inline-flex !important; /* 🔥 Visible solo en mobile */
+    padding: 8px !important;
   }
 
   .whatsappButtonMobile {
     display: block !important; /* 🔥 Botón WhatsApp dentro del menú */
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbar {
+    padding: 0.5rem 0.25rem;
+    min-height: 55px;
+  }
+
+  .logoImage {
+    max-height: 40px;
+    min-height: 30px;
+  }
+
+  .drawer {
+    width: 280px;
+    padding: 15px;
   }
 }

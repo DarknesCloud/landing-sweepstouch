@@ -1,138 +1,335 @@
+/* ============ HERO VERTICAL LAYOUT ============ */
 .hero {
-  min-height: 100vh;
   display: flex;
-  font-family: 'Roboto', sans-serif;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
 }
 
-.gridContainer {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
 }
 
-/* ============ LADO IZQUIERDO ============ */
+/* ============ TÍTULO ============ */
+.titleSection {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mainTitle {
+  font-size: 3.5rem !important;
+  font-weight: 900 !important;
+  color: #2c3e50;
+  line-height: 1.1 !important;
+  margin-bottom: 0.5rem !important;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+/* ============ IMAGEN ============ */
 .imageSection {
   position: relative;
-  height: 100vh;
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
   overflow: hidden;
-  flex: 1;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .bgImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-
-  /* Imagen pegada a la izquierda */
-  object-position: left;
-
-  /* degradado que se desvanece hacia la derecha */
-  -webkit-mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: left;
-  -webkit-mask-size: cover;
-
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  mask-repeat: no-repeat;
-  mask-position: left;
-  mask-size: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
 }
 
-/* ============ LADO DERECHO ============ */
-.contentSection {
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  padding: 4rem 3rem;
-  height: 100vh;
-  flex: 1;
+.bgImage:hover {
+  transform: scale(1.05);
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  max-width: 600px;
-}
-
-.mainTitle {
-  font-size: 3rem !important;
-  font-weight: 800 !important;
-  line-height: 1.1 !important;
-  margin-bottom: 0.3rem !important;
-  color: #111;
+/* ============ TEXTO ============ */
+.textSection {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .subtitle {
-  font-size: 1.2rem !important;
-  font-weight: 400 !important;
-  margin-bottom: 1.5rem !important;
-  color: #333;
+  font-size: 1.3rem !important;
+  font-weight: 500 !important;
+  color: #444;
+  line-height: 1.4 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* ============ BOTÓN ============ */
+.buttonSection {
+  margin-bottom: 1.5rem;
 }
 
 .ctaButton {
-  background: #e91e63 !important;
-  color: #fff !important;
-  font-weight: 600 !important;
-  font-size: 1rem !important;
+  background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%) !important;
+  color: white !important;
   padding: 1rem 2.5rem !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
   border-radius: 50px !important;
-  text-transform: none !important;
-  margin-bottom: 2rem !important;
-  box-shadow: 0 6px 16px rgba(233, 30, 99, 0.3) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3) !important;
   transition: all 0.3s ease !important;
+  border: none !important;
 }
 
 .ctaButton:hover {
-  background: #c2185b !important;
-  box-shadow: 0 8px 20px rgba(194, 24, 91, 0.4) !important;
-  transform: translateY(-2px);
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 35px rgba(233, 30, 99, 0.4) !important;
 }
 
+/* ============ ESTADÍSTICAS ============ */
 .statsContainer {
-  display: flex;
-  align-items: center;
+  text-align: center;
 }
 
 .statText {
-  font-size: 0.95rem !important;
+  font-size: 1rem !important;
   font-weight: 500 !important;
-  color: #444;
+  color: #666;
+  margin-top: 1rem !important;
 }
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 960px) {
-  .hero {
-    flex-direction: column;
+  .container {
+    padding: 1.5rem;
+  }
+
+  .titleSection {
+    margin-bottom: 1.5rem;
+  }
+
+  .mainTitle {
+    font-size: 2.8rem !important;
   }
 
   .imageSection {
-    height: 50vh;
+    height: 250px;
+    margin-bottom: 1.5rem;
   }
 
-  .contentSection {
-    height: auto;
-    min-height: 50vh;
-    padding: 3rem 2rem;
-    text-align: center;
+  .textSection {
+    margin-bottom: 1.5rem;
   }
 
-  .content {
-    align-items: center;
-    max-width: 90%; /* 🔥 Mejor uso del ancho */
+  .subtitle {
+    font-size: 1.1rem !important;
+  }
+
+  .ctaButton {
+    padding: 0.9rem 2rem !important;
+    font-size: 0.95rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .titleSection {
+    margin-bottom: 1.2rem;
   }
 
   .mainTitle {
     font-size: 2.2rem !important;
+  }
+
+  .imageSection {
+    height: 200px;
+    margin-bottom: 1.2rem;
+  }
+
+  .textSection {
+    margin-bottom: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem !important;
+  }
+
+  .ctaButton {
+    padding: 0.8rem 1.8rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .statText {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.8rem;
+  }
+
+  .titleSection {
+    margin-bottom: 1rem;
+  }
+
+  .mainTitle {
+    font-size: 1.8rem !important;
+  }
+
+  .imageSection {
+    height: 180px;
+    margin-bottom: 1rem;
+  }
+
+  .textSection {
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem !important;
+  }
+
+  .buttonSection {
+    margin-bottom: 1rem;
+  }
+
+  .ctaButton {
+    padding: 0.7rem 1.5rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  .statText {
+    font-size: 0.85rem !important;
+  }
+}
+
+/* ============ DESKTOP LAYOUT ============ */
+@media (min-width: 1200px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* centrado horizontal */
+    gap: 5rem; /* más espacio entre columnas */
+  }
+
+  /* Columna de imagen */
+  .imageSection {
+    order: 1; /* la imagen a la izquierda */
+    max-width: 650px;
+    height: auto; /* que respete proporción */
+    flex-shrink: 0;
+  }
+
+  /* Columna de contenido */
+  .contentWrapper {
+    order: 2; /* el texto a la derecha */
+    flex: 1;
+    max-width: 600px;
+  }
+
+  .titleSection,
+  .textSection,
+  .buttonSection,
+  .statsContainer {
+    text-align: left; /* alinear textos a la izquierda */
+  }
+
+  .mainTitle {
+    font-size: 3rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .subtitle {
+    font-size: 1.2rem !important;
+  }
+
+  .statText {
+    font-size: 1rem !important;
+  }
+}
+@media (min-width: 1200px) {
+  .hero {
+    padding: 0; /* elimina cualquier espacio */
+    margin: 0;
+  }
+
+  .container {
+    flex-direction: row;
+    align-items: stretch; /* que la imagen ocupe todo el alto */
+    justify-content: flex-start;
+    gap: 0; /* sin separación entre columnas */
+    padding: 0; /* elimina padding */
+    margin: 0;
+    width: 100%;
+    height: 100vh; /* ocupa todo el alto del viewport */
+  }
+
+  /* Columna de imagen */
+  .imageSection {
+    order: 1;
+    flex: 1; /* ocupa todo el espacio disponible a la izquierda */
+    height: 100%;
+    margin: 0;
+    border-radius: 0; /* elimina borde redondeado */
+    box-shadow: none; /* elimina sombra */
+    position: relative;
+  }
+
+  .bgImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ocupa todo */
+    object-position: -11px center; /* pegado al borde izquierdo */
+  }
+
+  /* Desvanecido hacia la derecha */
+  .imageSection::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px; /* ancho del fade */
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      #ffffff 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Columna de contenido */
+  .contentWrapper {
+    order: 2;
+    flex: 0 0 45%; /* el texto ocupa 45% */
+    padding: 4rem; /* espacio interno */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    background: #ffffff; /* asegura contraste con fade */
+  }
+
+  .titleSection,
+  .textSection,
+  .buttonSection,
+  .statsContainer {
+    text-align: left;
   }
 }

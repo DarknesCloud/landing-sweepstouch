@@ -120,16 +120,102 @@
 }
 
 @media (max-width: 768px) {
+  .carousel {
+    padding: 1.5rem 1rem;
+  }
+
   .slide {
     flex-direction: column;
     text-align: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
   }
 
   .content {
     text-align: center;
   }
 
+  .title {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+
+  .author {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
+
   .stars {
     justify-content: center;
+    font-size: 1.3rem;
+    gap: 0.6rem;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .clientImage {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    padding: 1rem 0.5rem;
+  }
+
+  .slide {
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 15px 0px 15px 0px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+  }
+
+  .author {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .stars {
+    font-size: 1.2rem;
+    gap: 0.4rem;
+  }
+
+  .arrow {
+    font-size: 1.3rem;
+    padding: 0.3rem;
+  }
+
+  .clientImage {
+    width: 120px;
+    height: 120px;
+  }
+
+  .dots {
+    bottom: 0.5rem;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
   }
 }
